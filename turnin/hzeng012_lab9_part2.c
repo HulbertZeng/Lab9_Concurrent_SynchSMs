@@ -1,4 +1,4 @@
- /* Author: Hulebrt Zeng
+ /* Author: Hulbert Zeng
  * Partner(s) Name (if applicable):  
  * Lab Section: 021
  * Assignment: Lab #9  Exercise #2
@@ -112,6 +112,9 @@ int main(void) {
     DDRA = 0x00; PORTA = 0xFF;
     TimerSet(100);
     TimerOn();
+    TL_State = TL_SMStart;
+    BL_State = BL_SMStart;
+    CL_State = CL_SMStart;
     /* Insert your solution below */
     while (1) {
         while(!TimerFlag);
